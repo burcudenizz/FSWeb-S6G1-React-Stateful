@@ -69,7 +69,7 @@ export default function Input() {
           type="text"
           onChange={inputuDeğiştir}
           value={inputDeğeri}
-        />{" "}
+        />
         {/* ADIM 6 */}
         <button id="resetInput" onClick={reset}>
           Reset
