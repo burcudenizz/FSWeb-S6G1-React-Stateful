@@ -53,15 +53,23 @@ export default function Input() {
   const stil = {
     fontSize: "1.5em",
     marginBottom: "0.3em",
-    color: inputDeğeri.length > 10 ? "crimson" : "" /* ADIM 2 */,
+    color: inputDeğeri.length > 10 ? "crimson" : "royalblue" /* ADIM 2 */,
   };
 
   return (
     <div className="widget-input container">
       <h2>Input</h2>
-      <div id="output" style={stil}></div> {/* ADIM 3 */}
+      <div id="output" style={stil}>
+        {inputDeğeri.toUpperCase()}
+      </div>{" "}
+      {/* ADIM 3 */}
       <div>
-        <input id="input" type="text" onChange={inputuDeğiştir} />{" "}
+        <input
+          id="input"
+          type="text"
+          onChange={inputuDeğiştir}
+          value={inputDeğeri}
+        />{" "}
         {/* ADIM 6 */}
         <button id="resetInput" onClick={reset}>
           Reset
